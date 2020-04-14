@@ -4,6 +4,8 @@
 #include "esp_system.h"
 #include "esp_spi_flash.h"
 
+#include "config.h"
+
 
 void app_main()
 {
