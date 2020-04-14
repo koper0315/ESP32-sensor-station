@@ -6,15 +6,16 @@
 
 #include "config.h"
 #include "delay_.h"
+#include "buzzer_.h"
 
 
 void app_main()
 {
+    buzzer_init();
     int i=0;
-    printf("Hello world!\n");
-    while (1)
+    while (1) //main loop
     {
-        printf("delay_test%d\n", i);
+        printf("test%d\n", i);
         delay_ms(1000);
         i++;
     }

@@ -80,7 +80,16 @@ main.o: C:/msys32/home/Peter/doga/sensors/main/main.c \
  C:/msys32/home/Peter/esp/esp-idf/components/freertos/include/freertos/list.h \
  C:/msys32/home/Peter/esp/esp-idf/components/spi_flash/include/esp_spi_flash.h \
  C:/msys32/home/Peter/doga/sensors/main/config.h \
- C:/msys32/home/Peter/doga/sensors/main/delay_.h
+ C:/msys32/home/Peter/doga/sensors/main/delay_.h \
+ C:/msys32/home/Peter/doga/sensors/main/buzzer_.h \
+ C:/msys32/home/Peter/esp/esp-idf/components/driver/include/driver/ledc.h \
+ C:/msys32/home/Peter/esp/esp-idf/components/driver/include/driver/periph_ctrl.h \
+ C:/msys32/home/Peter/esp/esp-idf/components/soc/esp32/include/soc/dport_reg.h \
+ C:/msys32/home/Peter/esp/esp-idf/components/soc/esp32/include/soc/dport_access.h \
+ C:/msys32/home/Peter/esp/esp-idf/components/esp32/include/esp_dport_access.h \
+ C:/msys32/home/Peter/esp/esp-idf/components/soc/esp32/include/soc/uart_reg.h \
+ C:/msys32/home/Peter/esp/esp-idf/components/soc/esp32/include/soc/periph_defs.h \
+ C:/msys32/home/Peter/esp/esp-idf/components/driver/include/driver/mcpwm.h
 
 C:/msys32/home/Peter/esp/esp-idf/components/newlib/include/stdio.h:
 
@@ -245,4 +254,22 @@ C:/msys32/home/Peter/esp/esp-idf/components/spi_flash/include/esp_spi_flash.h:
 C:/msys32/home/Peter/doga/sensors/main/config.h:
 
 C:/msys32/home/Peter/doga/sensors/main/delay_.h:
+
+C:/msys32/home/Peter/doga/sensors/main/buzzer_.h:
+
+C:/msys32/home/Peter/esp/esp-idf/components/driver/include/driver/ledc.h:
+
+C:/msys32/home/Peter/esp/esp-idf/components/driver/include/driver/periph_ctrl.h:
+
+C:/msys32/home/Peter/esp/esp-idf/components/soc/esp32/include/soc/dport_reg.h:
+
+C:/msys32/home/Peter/esp/esp-idf/components/soc/esp32/include/soc/dport_access.h:
+
+C:/msys32/home/Peter/esp/esp-idf/components/esp32/include/esp_dport_access.h:
+
+C:/msys32/home/Peter/esp/esp-idf/components/soc/esp32/include/soc/uart_reg.h:
+
+C:/msys32/home/Peter/esp/esp-idf/components/soc/esp32/include/soc/periph_defs.h:
+
+C:/msys32/home/Peter/esp/esp-idf/components/driver/include/driver/mcpwm.h:
 /home/Peter/doga/sensors/main/./main.c:
