@@ -1,7 +1,7 @@
 #include "buzzer_.h"
 #include "config.h"
 
-#define GPIO_BUZZER buzzer_port
+#define GPIO_BUZZER buzzer_pin
 #define GPIO_BUZZER_PIN_SEL  ((1ULL<<GPIO_BUZZER))
 
 void buzzer_init(void)

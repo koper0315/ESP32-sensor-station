@@ -7,16 +7,14 @@
 #include "config.h"
 #include "delay_.h"
 #include "buzzer_.h"
+#include "mhz19b.h"
 
 
 void app_main()
 {
     buzzer_init();
-    int i=0;
-    while (1) //main loop
-    {
-        printf("test%d\n", i);
-        delay_ms(1000);
-        i++;
-    }
+    co2_init();
+
+    xTaskCreate(rx_task, "uart_rx_task", 1024*2, NULL, configMAX_PRIORITIES, NULL);
+    xTaskCreate(tx_task, "uart_tx_task", 1024*2, NULL, configMAX_PRIORITIES-1, NULL);
 }
