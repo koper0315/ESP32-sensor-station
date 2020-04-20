@@ -102,7 +102,13 @@ main.o: C:/msys32/home/Peter/doga/sensors/main/main.c \
  C:/msys32/home/Peter/esp/esp-idf/components/esp_ringbuf/include/freertos/ringbuf.h \
  C:/msys32/home/Peter/esp/esp-idf/components/soc/esp32/include/soc/uart_channel.h \
  C:/msys32/home/Peter/esp/esp-idf/components/newlib/include/string.h \
- C:/msys32/home/Peter/esp/esp-idf/components/newlib/include/sys/string.h
+ C:/msys32/home/Peter/esp/esp-idf/components/newlib/include/sys/string.h \
+ C:/msys32/home/Peter/doga/sensors/main/dust_sensor.h \
+ C:/msys32/home/Peter/esp/esp-idf/components/driver/include/driver/adc.h \
+ C:/msys32/home/Peter/esp/esp-idf/components/soc/esp32/include/soc/adc_channel.h \
+ C:/msys32/home/Peter/esp/esp-idf/components/esp_adc_cal/include/esp_adc_cal.h \
+ C:/msys32/home/Peter/esp/esp-idf/components/soc/esp32/include/soc/mcpwm_reg.h \
+ C:/msys32/home/Peter/esp/esp-idf/components/soc/esp32/include/soc/mcpwm_struct.h
 
 C:/msys32/home/Peter/esp/esp-idf/components/newlib/include/stdio.h:
 
@@ -311,4 +317,16 @@ C:/msys32/home/Peter/esp/esp-idf/components/soc/esp32/include/soc/uart_channel.h
 C:/msys32/home/Peter/esp/esp-idf/components/newlib/include/string.h:
 
 C:/msys32/home/Peter/esp/esp-idf/components/newlib/include/sys/string.h:
+
+C:/msys32/home/Peter/doga/sensors/main/dust_sensor.h:
+
+C:/msys32/home/Peter/esp/esp-idf/components/driver/include/driver/adc.h:
+
+C:/msys32/home/Peter/esp/esp-idf/components/soc/esp32/include/soc/adc_channel.h:
+
+C:/msys32/home/Peter/esp/esp-idf/components/esp_adc_cal/include/esp_adc_cal.h:
+
+C:/msys32/home/Peter/esp/esp-idf/components/soc/esp32/include/soc/mcpwm_reg.h:
+
+C:/msys32/home/Peter/esp/esp-idf/components/soc/esp32/include/soc/mcpwm_struct.h:
 /home/Peter/doga/sensors/main/./main.c:

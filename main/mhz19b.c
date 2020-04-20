@@ -26,7 +26,7 @@ void co2_init()
 int sendData(const char* logName, const char* data)
 {
     const int txBytes = uart_write_bytes(UART_NUM_1, Co2_tx_cmd, 9);
-    ESP_LOGI(logName, "Wrote %d bytes", txBytes);
+    //ESP_LOGI(logName, "Wrote %d bytes", txBytes);
     return txBytes;
 }
 
@@ -50,11 +50,10 @@ void rx_task()
         const int rxBytes = uart_read_bytes(UART_NUM_1, data, RX_BUF_SIZE, 1000 / portTICK_RATE_MS);
         if (rxBytes > 0) {
             data[rxBytes] = 0;
-            ESP_LOGI(RX_TASK_TAG, "Read %d bytes: '%s'", rxBytes, data);
-            ESP_LOG_BUFFER_HEXDUMP(RX_TASK_TAG, data, rxBytes, ESP_LOG_INFO);
+            //ESP_LOGI(RX_TASK_TAG, "Read %d bytes: '%s'", rxBytes, data);
+            //ESP_LOG_BUFFER_HEXDUMP(RX_TASK_TAG, data, rxBytes, ESP_LOG_INFO);
             co2_concentration = data[2]*256+data[3];
             printf("co2 concentration: %d ppm\n",co2_concentration);
-
             printf("temperature: %dC°\n",data[4]-40);
         }
     }
