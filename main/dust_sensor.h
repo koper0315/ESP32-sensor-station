@@ -17,5 +17,8 @@ void dust_gpio_init();
 void dust_sensor_start();
 void dust_measuring();
 
+int public_voltage;
+float public_dust_density;
+
 
 #endif

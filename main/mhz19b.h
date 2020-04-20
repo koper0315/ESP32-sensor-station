@@ -9,10 +9,15 @@
 #include "soc/uart_struct.h"
 #include "string.h"
 
+
+
 void co2_init();
 int sendData();
 void tx_task();
 void rx_task();
+
+int public_co2_concentration;
+int public_temperature;
 
 
 #endif

@@ -4,10 +4,11 @@
 
 #define DUST_GPIO dust_gpio_pin
 
+
 void dust_gpio_init()
 {
     mcpwm_gpio_init(MCPWM_UNIT_0, MCPWM0A, DUST_GPIO);
-    delay_ms(5000);
+    delay_ms(1000);
     dust_sensor_start();
 }
 void dust_sensor_start(void *arg)
@@ -34,27 +35,27 @@ static void check_efuse()
 {
     //Check TP is burned into eFuse
     if (esp_adc_cal_check_efuse(ESP_ADC_CAL_VAL_EFUSE_TP) == ESP_OK) {
-        printf("eFuse Two Point: Supported\n");
+        //printf("eFuse Two Point: Supported\n");
     } else {
-        printf("eFuse Two Point: NOT supported\n");
+        //printf("eFuse Two Point: NOT supported\n");
     }
 
     //Check Vref is burned into eFuse
     if (esp_adc_cal_check_efuse(ESP_ADC_CAL_VAL_EFUSE_VREF) == ESP_OK) {
-        printf("eFuse Vref: Supported\n");
+        //printf("eFuse Vref: Supported\n");
     } else {
-        printf("eFuse Vref: NOT supported\n");
+        //printf("eFuse Vref: NOT supported\n");
     }
 }
 
 static void print_char_val_type(esp_adc_cal_value_t val_type)
 {
     if (val_type == ESP_ADC_CAL_VAL_EFUSE_TP) {
-        printf("Characterized using Two Point Value\n");
+        //printf("Characterized using Two Point Value\n");
     } else if (val_type == ESP_ADC_CAL_VAL_EFUSE_VREF) {
-        printf("Characterized using eFuse Vref\n");
+        //printf("Characterized using eFuse Vref\n");
     } else {
-        printf("Characterized using Default Vref\n");
+        //printf("Characterized using Default Vref\n");
     }
 }
 
@@ -95,7 +96,9 @@ void dust_measuring()
         //Convert adc_reading to voltage in mV
         uint32_t voltage = esp_adc_cal_raw_to_voltage(adc_reading, adc_chars);
         dust_density = 0.17 * voltage - 0.1;
-        printf("Raw: %d\tVoltage: %dmV, dust density: %5.2fug/m3\n", adc_reading, voltage, dust_density);
+        //printf("Raw: %d\tVoltage: %dmV, dust density: %5.2fug/m3\n", adc_reading, voltage, dust_density);
+        public_voltage = voltage;
+        public_dust_density = dust_density;
         vTaskDelay(pdMS_TO_TICKS(500));
 }
 }

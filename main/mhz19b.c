@@ -53,8 +53,10 @@ void rx_task()
             //ESP_LOGI(RX_TASK_TAG, "Read %d bytes: '%s'", rxBytes, data);
             //ESP_LOG_BUFFER_HEXDUMP(RX_TASK_TAG, data, rxBytes, ESP_LOG_INFO);
             co2_concentration = data[2]*256+data[3];
-            printf("co2 concentration: %d ppm\n",co2_concentration);
-            printf("temperature: %dC°\n",data[4]-40);
+            //printf("co2 concentration: %d ppm\n",co2_concentration);
+            //printf("temperature: %dC°\n",data[4]-40);
+            public_co2_concentration = co2_concentration;
+            public_temperature = data[4]-40;
         }
     }
     free(data);
