@@ -1,0 +1,7 @@
+{
+    "files.associations": {
+        "buzzer_.h": "c",
+        "mhz19b.h": "c",
+        "json_creater.h": "c"
+    }
+}

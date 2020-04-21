@@ -1,23 +1,17 @@
-main.o: C:/msys32/home/Peter/doga/sensors/main/main.c \
- C:/msys32/home/Peter/esp/esp-idf/components/newlib/include/stdio.h \
+json_creater.o: C:/msys32/home/Peter/doga/sensors/main/json_creater.c \
+ C:/msys32/home/Peter/doga/sensors/main/json_creater.h \
+ C:/msys32/home/Peter/esp/esp-idf/components/freertos/include/freertos/FreeRTOS.h \
+ C:/msys32/home/Peter/esp/esp-idf/components/newlib/include/sys/reent.h \
  C:/msys32/home/Peter/esp/esp-idf/components/newlib/include/_ansi.h \
  C:/msys32/home/Peter/esp/esp-idf/components/newlib/include/newlib.h \
  C:/msys32/home/Peter/esp/esp-idf/components/newlib/include/sys/config.h \
  C:/msys32/home/Peter/esp/esp-idf/components/newlib/include/machine/ieeefp.h \
  C:/msys32/home/Peter/esp/esp-idf/components/newlib/include/sys/features.h \
  C:/msys32/home/Peter/esp/esp-idf/components/esp32/include/xtensa/config/core-isa.h \
- C:/msys32/home/Peter/esp/esp-idf/components/newlib/include/sys/cdefs.h \
- C:/msys32/home/Peter/esp/esp-idf/components/newlib/include/machine/_default_types.h \
- C:/msys32/home/Peter/esp/esp-idf/components/newlib/include/sys/reent.h \
- C:/msys32/home/Peter/esp/esp-idf/components/newlib/include/_ansi.h \
  C:/msys32/home/Peter/esp/esp-idf/components/newlib/include/sys/_types.h \
  C:/msys32/home/Peter/esp/esp-idf/components/newlib/include/machine/_types.h \
+ C:/msys32/home/Peter/esp/esp-idf/components/newlib/include/machine/_default_types.h \
  C:/msys32/home/Peter/esp/esp-idf/components/newlib/include/sys/lock.h \
- C:/msys32/home/Peter/esp/esp-idf/components/newlib/include/sys/types.h \
- C:/msys32/home/Peter/esp/esp-idf/components/newlib/include/machine/types.h \
- C:/msys32/home/Peter/esp/esp-idf/components/newlib/include/sys/sched.h \
- C:/msys32/home/Peter/esp/esp-idf/components/newlib/include/sys/stdio.h \
- C:/msys32/home/Peter/esp/esp-idf/components/freertos/include/freertos/FreeRTOS.h \
  C:/msys32/home/Peter/esp/esp-idf/components/newlib/include/stdint.h \
  C:/msys32/home/Peter/esp/esp-idf/components/newlib/include/sys/_intsup.h \
  C:/msys32/home/Peter/esp/esp-idf/components/freertos/include/freertos/FreeRTOSConfig.h \
@@ -33,6 +27,8 @@ main.o: C:/msys32/home/Peter/doga/sensors/main/main.c \
  C:/msys32/home/Peter/esp/esp-idf/components/esp32/include/xtensa/corebits.h \
  C:/msys32/home/Peter/esp/esp-idf/components/esp32/include/xtensa/xtruntime-frames.h \
  C:/msys32/home/Peter/esp/esp-idf/components/newlib/include/stdlib.h \
+ C:/msys32/home/Peter/esp/esp-idf/components/newlib/include/_ansi.h \
+ C:/msys32/home/Peter/esp/esp-idf/components/newlib/include/sys/cdefs.h \
  C:/msys32/home/Peter/esp/esp-idf/components/newlib/include/machine/stdlib.h \
  C:/msys32/home/Peter/esp/esp-idf/components/newlib/include/alloca.h \
  C:/msys32/home/Peter/esp/esp-idf/components/esp32/include/rom/ets_sys.h \
@@ -49,6 +45,11 @@ main.o: C:/msys32/home/Peter/doga/sensors/main/main.c \
  C:/msys32/home/Peter/esp/esp-idf/components/esp32/include/xtensa/xtruntime-core-state.h \
  C:/msys32/home/Peter/esp/esp-idf/components/esp32/include/esp_crosscore_int.h \
  C:/msys32/home/Peter/esp/esp-idf/components/esp32/include/esp_timer.h \
+ C:/msys32/home/Peter/esp/esp-idf/components/newlib/include/stdio.h \
+ C:/msys32/home/Peter/esp/esp-idf/components/newlib/include/sys/types.h \
+ C:/msys32/home/Peter/esp/esp-idf/components/newlib/include/machine/types.h \
+ C:/msys32/home/Peter/esp/esp-idf/components/newlib/include/sys/sched.h \
+ C:/msys32/home/Peter/esp/esp-idf/components/newlib/include/sys/stdio.h \
  C:/msys32/home/Peter/esp/esp-idf/components/esp32/include/esp_err.h \
  C:/msys32/home/Peter/esp/esp-idf/components/heap/include/esp_heap_caps.h \
  C:/msys32/home/Peter/esp/esp-idf/components/heap/include/multi_heap.h \
@@ -78,21 +79,25 @@ main.o: C:/msys32/home/Peter/doga/sensors/main/main.c \
  C:/msys32/home/Peter/esp/esp-idf/components/freertos/include/freertos/task.h \
  C:/msys32/home/Peter/esp/esp-idf/components/newlib/include/limits.h \
  C:/msys32/home/Peter/esp/esp-idf/components/freertos/include/freertos/list.h \
- C:/msys32/home/Peter/esp/esp-idf/components/spi_flash/include/esp_spi_flash.h \
+ C:/msys32/home/Peter/esp/esp-idf/components/log/include/esp_log.h \
+ C:/msys32/home/Peter/esp/esp-idf/components/log/include/esp_log_internal.h \
+ C:/msys32/home/Peter/esp/esp-idf/components/json/cJSON/cJSON.h \
  C:/msys32/home/Peter/doga/sensors/main/config.h \
  C:/msys32/home/Peter/doga/sensors/main/delay_.h \
- C:/msys32/home/Peter/doga/sensors/main/buzzer_.h \
- C:/msys32/home/Peter/esp/esp-idf/components/driver/include/driver/ledc.h \
+ C:/msys32/home/Peter/doga/sensors/main/dust_sensor.h \
+ C:/msys32/home/Peter/esp/esp-idf/components/driver/include/driver/adc.h \
+ C:/msys32/home/Peter/esp/esp-idf/components/soc/esp32/include/soc/adc_channel.h \
+ C:/msys32/home/Peter/esp/esp-idf/components/esp_adc_cal/include/esp_adc_cal.h \
+ C:/msys32/home/Peter/esp/esp-idf/components/driver/include/driver/mcpwm.h \
  C:/msys32/home/Peter/esp/esp-idf/components/driver/include/driver/periph_ctrl.h \
  C:/msys32/home/Peter/esp/esp-idf/components/soc/esp32/include/soc/dport_reg.h \
  C:/msys32/home/Peter/esp/esp-idf/components/soc/esp32/include/soc/dport_access.h \
  C:/msys32/home/Peter/esp/esp-idf/components/esp32/include/esp_dport_access.h \
  C:/msys32/home/Peter/esp/esp-idf/components/soc/esp32/include/soc/uart_reg.h \
  C:/msys32/home/Peter/esp/esp-idf/components/soc/esp32/include/soc/periph_defs.h \
- C:/msys32/home/Peter/esp/esp-idf/components/driver/include/driver/mcpwm.h \
+ C:/msys32/home/Peter/esp/esp-idf/components/soc/esp32/include/soc/mcpwm_reg.h \
+ C:/msys32/home/Peter/esp/esp-idf/components/soc/esp32/include/soc/mcpwm_struct.h \
  C:/msys32/home/Peter/doga/sensors/main/mhz19b.h \
- C:/msys32/home/Peter/esp/esp-idf/components/log/include/esp_log.h \
- C:/msys32/home/Peter/esp/esp-idf/components/log/include/esp_log_internal.h \
  C:/msys32/home/Peter/esp/esp-idf/components/driver/include/driver/uart.h \
  C:/msys32/home/Peter/esp/esp-idf/components/soc/esp32/include/soc/uart_reg.h \
  C:/msys32/home/Peter/esp/esp-idf/components/soc/esp32/include/soc/uart_struct.h \
@@ -102,17 +107,13 @@ main.o: C:/msys32/home/Peter/doga/sensors/main/main.c \
  C:/msys32/home/Peter/esp/esp-idf/components/esp_ringbuf/include/freertos/ringbuf.h \
  C:/msys32/home/Peter/esp/esp-idf/components/soc/esp32/include/soc/uart_channel.h \
  C:/msys32/home/Peter/esp/esp-idf/components/newlib/include/string.h \
- C:/msys32/home/Peter/esp/esp-idf/components/newlib/include/sys/string.h \
- C:/msys32/home/Peter/doga/sensors/main/dust_sensor.h \
- C:/msys32/home/Peter/esp/esp-idf/components/driver/include/driver/adc.h \
- C:/msys32/home/Peter/esp/esp-idf/components/soc/esp32/include/soc/adc_channel.h \
- C:/msys32/home/Peter/esp/esp-idf/components/esp_adc_cal/include/esp_adc_cal.h \
- C:/msys32/home/Peter/esp/esp-idf/components/soc/esp32/include/soc/mcpwm_reg.h \
- C:/msys32/home/Peter/esp/esp-idf/components/soc/esp32/include/soc/mcpwm_struct.h \
- C:/msys32/home/Peter/doga/sensors/main/json_creater.h \
- C:/msys32/home/Peter/esp/esp-idf/components/json/cJSON/cJSON.h
+ C:/msys32/home/Peter/esp/esp-idf/components/newlib/include/sys/string.h
 
-C:/msys32/home/Peter/esp/esp-idf/components/newlib/include/stdio.h:
+C:/msys32/home/Peter/doga/sensors/main/json_creater.h:
+
+C:/msys32/home/Peter/esp/esp-idf/components/freertos/include/freertos/FreeRTOS.h:
+
+C:/msys32/home/Peter/esp/esp-idf/components/newlib/include/sys/reent.h:
 
 C:/msys32/home/Peter/esp/esp-idf/components/newlib/include/_ansi.h:
 
@@ -126,29 +127,13 @@ C:/msys32/home/Peter/esp/esp-idf/components/newlib/include/sys/features.h:
 
 C:/msys32/home/Peter/esp/esp-idf/components/esp32/include/xtensa/config/core-isa.h:
 
-C:/msys32/home/Peter/esp/esp-idf/components/newlib/include/sys/cdefs.h:
-
-C:/msys32/home/Peter/esp/esp-idf/components/newlib/include/machine/_default_types.h:
-
-C:/msys32/home/Peter/esp/esp-idf/components/newlib/include/sys/reent.h:
-
-C:/msys32/home/Peter/esp/esp-idf/components/newlib/include/_ansi.h:
-
 C:/msys32/home/Peter/esp/esp-idf/components/newlib/include/sys/_types.h:
 
 C:/msys32/home/Peter/esp/esp-idf/components/newlib/include/machine/_types.h:
 
+C:/msys32/home/Peter/esp/esp-idf/components/newlib/include/machine/_default_types.h:
+
 C:/msys32/home/Peter/esp/esp-idf/components/newlib/include/sys/lock.h:
-
-C:/msys32/home/Peter/esp/esp-idf/components/newlib/include/sys/types.h:
-
-C:/msys32/home/Peter/esp/esp-idf/components/newlib/include/machine/types.h:
-
-C:/msys32/home/Peter/esp/esp-idf/components/newlib/include/sys/sched.h:
-
-C:/msys32/home/Peter/esp/esp-idf/components/newlib/include/sys/stdio.h:
-
-C:/msys32/home/Peter/esp/esp-idf/components/freertos/include/freertos/FreeRTOS.h:
 
 C:/msys32/home/Peter/esp/esp-idf/components/newlib/include/stdint.h:
 
@@ -179,6 +164,10 @@ C:/msys32/home/Peter/esp/esp-idf/components/esp32/include/xtensa/corebits.h:
 C:/msys32/home/Peter/esp/esp-idf/components/esp32/include/xtensa/xtruntime-frames.h:
 
 C:/msys32/home/Peter/esp/esp-idf/components/newlib/include/stdlib.h:
+
+C:/msys32/home/Peter/esp/esp-idf/components/newlib/include/_ansi.h:
+
+C:/msys32/home/Peter/esp/esp-idf/components/newlib/include/sys/cdefs.h:
 
 C:/msys32/home/Peter/esp/esp-idf/components/newlib/include/machine/stdlib.h:
 
@@ -211,6 +200,16 @@ C:/msys32/home/Peter/esp/esp-idf/components/esp32/include/xtensa/xtruntime-core-
 C:/msys32/home/Peter/esp/esp-idf/components/esp32/include/esp_crosscore_int.h:
 
 C:/msys32/home/Peter/esp/esp-idf/components/esp32/include/esp_timer.h:
+
+C:/msys32/home/Peter/esp/esp-idf/components/newlib/include/stdio.h:
+
+C:/msys32/home/Peter/esp/esp-idf/components/newlib/include/sys/types.h:
+
+C:/msys32/home/Peter/esp/esp-idf/components/newlib/include/machine/types.h:
+
+C:/msys32/home/Peter/esp/esp-idf/components/newlib/include/sys/sched.h:
+
+C:/msys32/home/Peter/esp/esp-idf/components/newlib/include/sys/stdio.h:
 
 C:/msys32/home/Peter/esp/esp-idf/components/esp32/include/esp_err.h:
 
@@ -270,15 +269,25 @@ C:/msys32/home/Peter/esp/esp-idf/components/newlib/include/limits.h:
 
 C:/msys32/home/Peter/esp/esp-idf/components/freertos/include/freertos/list.h:
 
-C:/msys32/home/Peter/esp/esp-idf/components/spi_flash/include/esp_spi_flash.h:
+C:/msys32/home/Peter/esp/esp-idf/components/log/include/esp_log.h:
+
+C:/msys32/home/Peter/esp/esp-idf/components/log/include/esp_log_internal.h:
+
+C:/msys32/home/Peter/esp/esp-idf/components/json/cJSON/cJSON.h:
 
 C:/msys32/home/Peter/doga/sensors/main/config.h:
 
 C:/msys32/home/Peter/doga/sensors/main/delay_.h:
 
-C:/msys32/home/Peter/doga/sensors/main/buzzer_.h:
+C:/msys32/home/Peter/doga/sensors/main/dust_sensor.h:
 
-C:/msys32/home/Peter/esp/esp-idf/components/driver/include/driver/ledc.h:
+C:/msys32/home/Peter/esp/esp-idf/components/driver/include/driver/adc.h:
+
+C:/msys32/home/Peter/esp/esp-idf/components/soc/esp32/include/soc/adc_channel.h:
+
+C:/msys32/home/Peter/esp/esp-idf/components/esp_adc_cal/include/esp_adc_cal.h:
+
+C:/msys32/home/Peter/esp/esp-idf/components/driver/include/driver/mcpwm.h:
 
 C:/msys32/home/Peter/esp/esp-idf/components/driver/include/driver/periph_ctrl.h:
 
@@ -292,13 +301,11 @@ C:/msys32/home/Peter/esp/esp-idf/components/soc/esp32/include/soc/uart_reg.h:
 
 C:/msys32/home/Peter/esp/esp-idf/components/soc/esp32/include/soc/periph_defs.h:
 
-C:/msys32/home/Peter/esp/esp-idf/components/driver/include/driver/mcpwm.h:
+C:/msys32/home/Peter/esp/esp-idf/components/soc/esp32/include/soc/mcpwm_reg.h:
+
+C:/msys32/home/Peter/esp/esp-idf/components/soc/esp32/include/soc/mcpwm_struct.h:
 
 C:/msys32/home/Peter/doga/sensors/main/mhz19b.h:
-
-C:/msys32/home/Peter/esp/esp-idf/components/log/include/esp_log.h:
-
-C:/msys32/home/Peter/esp/esp-idf/components/log/include/esp_log_internal.h:
 
 C:/msys32/home/Peter/esp/esp-idf/components/driver/include/driver/uart.h:
 
@@ -319,20 +326,4 @@ C:/msys32/home/Peter/esp/esp-idf/components/soc/esp32/include/soc/uart_channel.h
 C:/msys32/home/Peter/esp/esp-idf/components/newlib/include/string.h:
 
 C:/msys32/home/Peter/esp/esp-idf/components/newlib/include/sys/string.h:
-
-C:/msys32/home/Peter/doga/sensors/main/dust_sensor.h:
-
-C:/msys32/home/Peter/esp/esp-idf/components/driver/include/driver/adc.h:
-
-C:/msys32/home/Peter/esp/esp-idf/components/soc/esp32/include/soc/adc_channel.h:
-
-C:/msys32/home/Peter/esp/esp-idf/components/esp_adc_cal/include/esp_adc_cal.h:
-
-C:/msys32/home/Peter/esp/esp-idf/components/soc/esp32/include/soc/mcpwm_reg.h:
-
-C:/msys32/home/Peter/esp/esp-idf/components/soc/esp32/include/soc/mcpwm_struct.h:
-
-C:/msys32/home/Peter/doga/sensors/main/json_creater.h:
-
-C:/msys32/home/Peter/esp/esp-idf/components/json/cJSON/cJSON.h:
-/home/Peter/doga/sensors/main/./main.c:
+/home/Peter/doga/sensors/main/./json_creater.c:
