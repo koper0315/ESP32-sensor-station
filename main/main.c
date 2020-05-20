@@ -11,21 +11,43 @@
 #include "dust_sensor.h"
 #include "json_creater.h"
 
+//#include "bme280.h"
+#include "bme_controller.h"
+
+// void bme_controller_init()
+// {
+//     bme280_config_t bme0 = {
+//             .sda_pin = bme_sda_pin,
+//             .scl_pin = bme_scl_pin,
+//             .i2c_instance = I2C_NUM_1
+//     };
+//     bme280_setup(&bme0);
+// }
+
+// void bme_controller_task()
+// {
+//     bme280_measurement_t reading;
+//     bme280_make_measurement(&bme0, &reading);
+//     bme280_print_measurement(&reading);
+// }
 
 void app_main()
 {
     //buzzer_init();
-    co2_init();
-    dust_gpio_init();
-    xTaskCreate(dust_measuring, "dust_measuring", 1024*2, NULL, configMAX_PRIORITIES, NULL);
-    xTaskCreate(rx_task, "uart_rx_task", 1024*2, NULL, configMAX_PRIORITIES, NULL);
-    xTaskCreate(tx_task, "uart_tx_task", 1024*2, NULL, configMAX_PRIORITIES-1, NULL);
+    //co2_init();
+    //dust_gpio_init();
+    //bme_controller_init();
+    //xTaskCreate(dust_measuring, "dust_measuring", 1024*2, NULL, configMAX_PRIORITIES, NULL);
+    //xTaskCreate(rx_task, "uart_rx_task", 1024*2, NULL, configMAX_PRIORITIES, NULL);
+    //xTaskCreate(tx_task, "uart_tx_task", 1024*2, NULL, configMAX_PRIORITIES-1, NULL);
     //xTaskCreate(jsonCreateTask,"jsonCreateTask",1024*2, NULL, configMAX_PRIORITIES,NULL);
-    while (1)
-    {
-        printf("Dust density: %5.2fug/m3, co2: %dppm, temp: %dC°\n",public_dust_density,public_co2_concentration, public_temperature);
-        delay_ms(5000);
-    }
+    xTaskCreate(bme_controller_task, "bme_controller_task", 1024*2, NULL, configMAX_PRIORITIES-1, NULL);
+    // while (1)
+    // {
+    //     printf("Dust density: %5.2fug/m3, co2: %dppm, temp: %dC°\n",public_dust_density,public_co2_concentration, public_temperature);*/
+    //     bme_controller_task();
+    //     delay_ms(5000);
+    // }
     // while (1)
     // {
     //     jsonCreateTask();
