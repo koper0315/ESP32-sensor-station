@@ -13,6 +13,7 @@
 
 //#include "bme280.h"
 #include "bme_controller.h"
+#include "sa_14.h"
 
 // void bme_controller_init()
 // {
@@ -41,18 +42,15 @@ void app_main()
     //xTaskCreate(rx_task, "uart_rx_task", 1024*2, NULL, configMAX_PRIORITIES, NULL);
     //xTaskCreate(tx_task, "uart_tx_task", 1024*2, NULL, configMAX_PRIORITIES-1, NULL);
     //xTaskCreate(jsonCreateTask,"jsonCreateTask",1024*2, NULL, configMAX_PRIORITIES,NULL);
-    xTaskCreate(bme_controller_task, "bme_controller_task", 1024*2, NULL, configMAX_PRIORITIES-1, NULL);
-    // while (1)
-    // {
-    //     printf("Dust density: %5.2fug/m3, co2: %dppm, temp: %dC°\n",public_dust_density,public_co2_concentration, public_temperature);*/
-    //     bme_controller_task();
-    //     delay_ms(5000);
-    // }
-    // while (1)
-    // {
-    //     jsonCreateTask();
-    //     delay_ms(5000);
-    // }
+    //xTaskCreate(bme_controller_task, "bme_controller_task", 1024*2, NULL, configMAX_PRIORITIES-1, NULL);
+    xTaskCreate(sa_controller_task, "sa_controller_task", 1024*2, NULL, configMAX_PRIORITIES-1, NULL);
+    while (1)
+    {
+        //printf("Dust density: %5.2fug/m3, co2: %dppm, temp: %dC°\n",public_dust_density,public_co2_concentration, public_temperature);*/
+        //printf("temperature: %.1f *C, Pressure:    %.0f hPa, Humidity:    %.0f %%\n", public_temp, public_pressure, public_humidity);
+        printf("sa raw: %d, saV: %dmV\n",public_sa_14_raw, public_sa_14_mv);
+        delay_ms(5000);
+    }
     
     
 }

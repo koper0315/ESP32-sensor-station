@@ -18,7 +18,7 @@ void bme_controller_task()
        bme280_measurement_t reading;
     bme280_make_measurement(&bme0, &reading);
     bme280_print_measurement(&reading);
-    printf("temperature: %.1f *C, Pressure:    %.0f hPa, Humidity:    %.0f %%\n", public_temp, public_pressure, public_humidity);
+    //printf("temperature: %.1f *C, Pressure:    %.0f hPa, Humidity:    %.0f %%\n", public_temp, public_pressure, public_humidity);
     delay_ms(5000);
     }
     
